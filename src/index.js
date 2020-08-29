@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./styles.scss";
 
 function Button(props) {
-  return <button>{props.children}</button>;
+  return <button onClick={props.onClick}>{props.children}</button>;
 }
 
 function Application(props) {
