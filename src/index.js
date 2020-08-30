@@ -11,7 +11,9 @@ function Application(props) {
   const [count, setCount] = useState(0);
   return (
     <main>
-      <Button onClick={(event) => console.log("Button clicked!")}>Reset</Button>
+      <Button onClick={(event) => setCount(count + 1)}>
+        Button is clicked {count} times
+      </Button>
     </main>
   );
 }
