@@ -8,12 +8,17 @@ function Button(props) {
 }
 
 function Application(props) {
-  const [count, setCount] = useState(0);
+  const [name, setname] = useState("");
   return (
     <main>
-      <Button onClick={(event) => setCount(count + 1)}>
-        Button is clicked {count} times
-      </Button>
+      <input
+        value={name}
+        onChange={(event) => {
+          setname(event.target.value);
+        }}
+        placeholder="Please enter your name"
+      />
+      <h1>Hello, {name ? name : "World"}!</h1>
     </main>
   );
 }
