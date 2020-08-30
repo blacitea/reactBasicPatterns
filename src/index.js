@@ -8,6 +8,7 @@ function Button(props) {
 }
 
 function Application(props) {
+  const [count, setCount] = useState(0);
   return (
     <main>
       <Button onClick={(event) => console.log("Button clicked!")}>Reset</Button>
