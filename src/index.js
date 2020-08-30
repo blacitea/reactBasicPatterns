@@ -9,6 +9,9 @@ function Button(props) {
 
 function Application(props) {
   const [name, setname] = useState("");
+  function reset() {
+    setname("");
+  }
   return (
     <main>
       <input
@@ -18,7 +21,12 @@ function Application(props) {
         }}
         placeholder="Please enter your name"
       />
-      {name && <h1>Hello, {name}.</h1>}
+      {name && (
+        <>
+          <h1>Hello, {name}.</h1>
+          <Button onClick={reset}>Reset</Button>
+        </>
+      )}
     </main>
   );
 }
