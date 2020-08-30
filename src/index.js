@@ -18,7 +18,7 @@ function Application(props) {
         }}
         placeholder="Please enter your name"
       />
-      <h1>Hello, {name ? name : "World"}!</h1>
+      {name && <h1>Hello, {name}.</h1>}
     </main>
   );
 }
